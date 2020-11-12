@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<mata http-equiv="X-UA-Compatible" content ="ie=edge">
+<title>Socket ID</title>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    $(()=>{
+        var socket = io();
+          
+        socket.on('message', (msg)=>{
+
+            document.getElementById("messages").innerHTML = msg;
+
+          
+        }
+           
+    )})
+
+    
+</script>
+</head>
+<body>
+    <!-- <div class="container">
+        <p>text</p>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+      </div> -->
+
+    <ul id='messages'></ul>
+  
+</div>
+
+</body>
+</html>
+
+
